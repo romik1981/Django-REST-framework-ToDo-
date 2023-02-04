@@ -6,7 +6,11 @@ DRF_GB_Project Учебный проект разработка «Web-серви
 
 Стек:
 
-Python > 3.7 Django==3.2.8 DRF Visual Studio Code 1.74.3 SQLite 3
+Python 3.8.10
+Django==3.2.8
+DRF
+Visual Studio Code 1.74.3
+SQLite 3
 
 Лицензия:
 
