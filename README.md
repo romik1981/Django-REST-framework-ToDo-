@@ -8,7 +8,7 @@ DRF_GB_Project Учебный проект разработка «Web-серви
 
 Python 3.8.10
 Django==3.2.8,
-DRF ?,
+DRF 3.14.0,
 Visual Studio Code 1.74.3,
 SQLite 3,
 
