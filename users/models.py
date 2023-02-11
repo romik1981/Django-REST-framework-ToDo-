@@ -21,3 +21,6 @@ class User(AbstractUser):
             "unique": "A user with that email address already exists.",
         },
     )
+
+    def __str__(self):
+        return f"{self.username} | {self.first_name} {self.last_name}"
