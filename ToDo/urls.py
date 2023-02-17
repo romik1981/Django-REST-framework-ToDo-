@@ -22,7 +22,6 @@ from users.views import UserModelViewSet
 
 # from rest_framework.routers import SimpleRouter
 
-
 # router = SimpleRouter()
 router = DefaultRouter()
 router.register("users", UserModelViewSet)
