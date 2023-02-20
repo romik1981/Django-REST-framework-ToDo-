@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,67 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*Пользовательские стили*/
+
+body{
+  background-color:lightgrey;
+  color: white;
+}
+
+.menu {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+li {
+  display: inline-block;
+  padding-inline-end: 20px;
+}
+
+a:-webkit-any-link {
+  color: white;
+  text-decoration: white;
+}
+
+.userlist,
+.footer,
+.projectlist,
+.todolist,
+.menu {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 5%;
+  background-color: grey;
+  width: 90%;
+  text-align: center;
 }
