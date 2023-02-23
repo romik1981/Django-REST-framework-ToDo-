@@ -1,21 +1,3 @@
-// import React from 'react'
-
-
-// const Menu = () => {
-//     return (
-//         <div>
-//             <p>
-//                 MENU
-//             </p>
-//         </div>
-
-//     )
-// }
-
-// export default Menu;
-
-
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 
