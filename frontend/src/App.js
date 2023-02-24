@@ -39,11 +39,11 @@ class App extends React.Component {
       },
       {
         'title': 'Проекты',
-        'link': '/projects/'
+        'link': '/projects'
       },
       {
         'title': 'TODO',
-        'link': '/TODO/'
+        'link': '/TODO'
       },
     ]
 
