@@ -48,12 +48,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # other
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
+    "rest_framework_simplejwt.token_blacklist",
+    "django_filters",
+    # my
     "users",
     "ToDoapp",
-    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -160,11 +163,18 @@ REST_FRAMEWORK = {
         "djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer",
         # Any other renders
     ),
+    "DEFAULT_PARSER_CLASSES": (
+        # If you use MultiPartFormParser or FormParser, we also have a camel case version
+        "djangorestframework_camel_case.parser.CamelCaseFormParser",
+        "djangorestframework_camel_case.parser.CamelCaseMultiPartParser",
+        "djangorestframework_camel_case.parser.CamelCaseJSONParser",
+        # Any other parsers
+    ),
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.TokenAuthentication",
-        #'rest_framework.authentication.SessionAuthentication',
-        #'rest_framework_simplejwt.authentication.JWTAuthentication',
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 100,
