@@ -2,7 +2,7 @@ import time
 
 import requests
 
-DOMAIN = "http://127.0.0.1:8001"
+DOMAIN = "http://127.0.0.1:8000"
 
 
 def timeout():
@@ -21,7 +21,7 @@ assert response.status_code == 401
 
 timeout()
 # базовая авторизация
-response = requests.get(get_url("/api/projects/"), auth=("nikolay", "1"))
+response = requests.get(get_url("/api/projects/"), auth=("admin", "12345"))
 assert response.status_code == 200
 
 timeout()
@@ -36,7 +36,7 @@ timeout()
 
 # авторизация по jwt
 # Получаем токен
-response = requests.post(get_url("/api/token/"), data={"username": "nikolay", "password": "1"})
+response = requests.post(get_url("/api/token/"), data={"username": "admin", "password": "12345"})
 result = response.json()
 # это наш токен
 access = result["access"]
