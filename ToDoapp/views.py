@@ -30,8 +30,18 @@ class TODOViewSet(ModelViewSet):
     pagination_class = TODOPageNumberPagination
     filterset_class = TODOFilter
 
+    # def destroy(self, request, *args, **kwargs):
+    #     item = self.get_object()
+    #     item.is_active = False
+    #     item.save()
+    #     return Response(status=status.HTTP_200_OK)
+
     def destroy(self, request, *args, **kwargs):
-        item = self.get_object()
-        item.is_active = False
-        item.save()
-        return Response(status=status.HTTP_200_OK)
+        try:
+            instance = self.get_object()
+            instance.is_active = False
+            instance.save()
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response(status=status.HTTP_204_NO_CONTENT)
