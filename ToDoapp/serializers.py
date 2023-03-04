@@ -14,3 +14,9 @@ class TODOSerializer(ModelSerializer):
         model = TODO
         fields = "__all__"
         # exclude = ("is_active",)
+
+
+class TODOSerializerBase(ModelSerializer):
+    class Meta:
+        model = TODO
+        exclude = ("is_active",)
