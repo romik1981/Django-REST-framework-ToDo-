@@ -252,3 +252,6 @@ fabric.properties
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+#node_js
+node_modules
