@@ -15,9 +15,9 @@ class Command(BaseCommand):
         User.objects.all().delete()
         user_count = options["count"]
         # Создаем суперпользователя
-        User.objects.create_superuser("leo", "leo@test.com", "dante123456")
+        User.objects.create_superuser("admin", "admin@admin.com", "12345")
         # Создаем тестовых пользователей
         for i in range(user_count):
-            User.objects.create_user(f"user{i}", f"user{i}@test.com", "dante123456")
+            User.objects.create_user(f"user{i}", f"user{i}@test.com", "12345")
 
         print("done")
