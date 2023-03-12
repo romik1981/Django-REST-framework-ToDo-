@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "django_filters",
     "drf_yasg",
+    "graphene_django",
     # my
     "users",
     "ToDoapp",
@@ -183,3 +184,5 @@ REST_FRAMEWORK = {
     "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.URLPathVersioning",
     # "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
 }
+
+GRAPHENE = {"SCHEMA": "ToDo.schema.schema"}
